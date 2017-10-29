@@ -32,5 +32,6 @@ export default class Dispatcher {
 
   dispatch (events, data) {
     this.handler.trigger(events, data)
+    return this
   }
 }
