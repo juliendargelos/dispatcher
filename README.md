@@ -41,7 +41,7 @@ class MyApi extends Dispatcher {
 var api = new Api()
 
 api.once('load', event => alert(event.message))     // Will be called once before getting removed
-api.on('update', event => alert('An updated'), 5)   // Will be called 5 times before getting removed
+api.on('update', event => alert('An update'), 5)   // Will be called 5 times before getting removed
 api.on('get', function getListener(event) {         // Will be called until the listener is removed
   console.log(event.data)
 })
