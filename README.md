@@ -21,7 +21,7 @@ class MyApi extends Dispatcher {
   get (id, callback) {
     // Your api needs to be loaded in order to get data!
     // The callback passed to 'require' will be instantly called if
-    // the event already happened, else it will wait for it.
+    // the event already happened, if not it will wait for it.
     this.require('load', () => {
       // Getting data...
       callback.call(this, data)
